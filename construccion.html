@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIANCO S.A.C. - Construcción y Diseño</title>
+    <link rel="icon" type="image/png" href="LOGO LOGO .png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-blue: #101f33;
+            --light-bg: #F0EBE5;
+            --white: #FFFFFF;
+            --text-dark: #152338;
+            --text-gray: #666666;
+            --font-serif: 'Cinzel', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 92px;
+            padding: 12px 3.2%;
+            background-color: var(--light-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #d3d8d5;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--navy-blue);
+        }
+
+        .logo-container img {
+            width: 225px;
+            max-width: 100%;
+            height: 64px;
+            object-fit: contain;
+            object-position: left center;
+            margin-right: 0;
+        }
+
+        .logo-text h1 {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            font-size: 0.7rem;
+            color: var(--text-gray);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--navy-blue);
+        }
+
+        section {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 62px 42px;
+        }
+
+        .section-navy {
+            background-color: var(--navy-blue);
+            color: var(--white);
+        }
+
+        .title-serif {
+            font-family: var(--font-serif);
+            font-size: clamp(2.4rem, 4.1vw, 3.45rem);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            max-width: 620px;
+        }
+
+        .full-width-frame {
+            position: relative;
+            width: calc(100% + 84px);
+            height: 390px;
+            margin: 0 -42px -62px;
+        }
+
+        .full-width-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 55%;
+            display: block;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px 20px;
+        }
+
+        .card-img {
+            padding: 0 0 22px;
+            border: 1px solid #e9e2db;
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 18px;
+            display: block;
+        }
+
+        .image-frame {
+            display: block;
+            margin-bottom: 18px;
+        }
+
+        .card-img h3 {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.18;
+            letter-spacing: 0.02em;
+            margin: 0 0 16px;
+            color: var(--navy-blue);
+            padding: 0 18px;
+        }
+
+        .card-img p {
+            padding: 0 18px;
+            line-height: 1.7;
+            font-size: 1.02rem;
+        }
+
+        footer {
+            background-color: var(--navy-blue);
+            color: var(--white);
+            padding: 26px 3.2%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 900px) {
+            header.navbar {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+            nav {
+                width: 100%;
+                overflow-x: auto;
+            }
+            nav ul {
+                display: flex;
+                gap: 14px;
+                width: max-content;
+            }
+            nav a {
+                font-size: 0.68rem;
+            }
+            .logo-container img {
+                width: 205px;
+                height: 58px !important;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 42px 24px;
+            }
+            .section-navy {
+                padding: 42px 24px;
+            }
+            .title-serif {
+                font-size: 2.2rem;
+            }
+            .full-width-frame {
+                height: 260px;
+                width: calc(100% + 48px);
+                margin-left: -24px;
+                margin-right: -24px;
+                margin-bottom: -42px;
+            }
+            footer {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+
+        @media (min-width: 901px) and (max-width: 1100px) {
+            nav ul {
+                gap: 12px;
+            }
+            nav a {
+                font-size: 0.72rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <a href="inicio.html" class="logo-container">
+            <img src="REAL PNG.png" alt="Logo DIANCO">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="construccion.html">Construcción y Diseño</a></li>
+                <li><a href="consultoria.html">Consultoría</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PANTALLA 2: CONSTRUCCIÓN Y DISEÑO -->
+    <section class="section-navy">
+        <!-- CAMBIAR TEXTO: cambia el número y el nombre de la pestaña si quieres otro título. -->
+        <p style="font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 10px;">01 / CONSTRUCCIÓN Y DISEÑO</p>
+        <!-- CAMBIAR TEXTO: cambia el título principal de esta sección. -->
+        <h2 class="title-serif">LO QUE NO SE VE,<br>TAMBIÉN SE HACE BIEN</h2>
+        <!-- CAMBIAR TEXTO: cambia el párrafo descriptivo de esta sección. -->
+        <p class="subtitle" style="color: #ccc;">Integramos diseño, planificación y ejecución bajo criterios técnicos estrictos para que tu obra sea tan segura por dentro como se ve por fuera.</p>
+        
+            <!-- CAMBIAR IMAGEN: cambia la URL dentro de src="..." por otra foto principal de obra. -->
+            <div class="full-width-frame">
+                <img src="imagen-2.jpg" alt="Modelo estructural digital en un espacio de trabajo de ingeniería" style="object-position: center 35%;">
+            </div>
+    </section>
+
+    <section style="background: var(--light-bg);">
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 40px;">
+            <span style="font-size: 0.8rem; font-weight: 600;">NUESTRAS ESPECIALIDADES</span>
+        </div>
+
+        <div class="grid-2">
+            <div class="card-img">
+                <span class="image-frame">
+                    <img src="imagen-3.jpg" alt="Equipo técnico coordinando un modelo BIM" style="object-position: center 40%;">
+                </span>
+                <h3>01 / GESTIÓN INTEGRAL Y COORDINACIÓN BIM</h3>
+                <p>Dirección total del proyecto, compatibilización digital y auditoría para erradicar interferencias antes de la obra.</p>
+            </div>
+            <div class="card-img">
+                <span class="image-frame">
+                    <img src="imagen-4.jpg" alt="Ingeniero revisando planos y modelo arquitectónico" style="object-position: center 40%;">
+                </span>
+                <h3>02 / INGENIERÍA Y DISEÑO SÍSMICO</h3>
+                <p>Cálculo estructural de alta precisión enfocado en máxima seguridad, optimización de materiales y resistencia sísmica.</p>
+            </div>
+            <div class="card-img">
+                <span class="image-frame">
+                    <img src="imagen-5.jpg" alt="Equipo técnico inspeccionando daños en una estructura" style="object-position: center 55%;">
+                </span>
+                <h3>03 / INGENIERÍA FORENSE Y REHABILITACIÓN ESTRUCTURAL</h3>
+                <p>Diagnóstico técnico de fallas, evaluación de vulnerabilidad sísmica y reforzamiento avanzado de estructuras existentes.</p>
+            </div>
+            <div class="card-img">
+                <span class="image-frame">
+                    <img src="imagen-6.jpg" alt="Especialista revisando un modelo digital de viviendas" style="object-position: center 30%;">
+                </span>
+                <h3>04 / GEMELOS DIGITALES Y HBIM</h3>
+                <p>Captura de realidad con escáner láser terrestre y drones LiDAR para crear modelos HBIM exactos y sin margen de error.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>DIANCO S.A.C. — CONSTRUCTORA & CONSULTORA</div>
+        <div>LIMA, PERÚ</div>
+    </footer>
+
+    <script>
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+        window.addEventListener("pageshow", function () {
+            document.documentElement.style.scrollBehavior = "auto";
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>

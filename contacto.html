@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIANCO S.A.C. - Contacto</title>
+    <link rel="icon" type="image/png" href="LOGO LOGO .png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy-blue: #101f33;
+            --light-bg: #F0EBE5;
+            --white: #FFFFFF;
+            --text-dark: #152338;
+            --text-gray: #666666;
+            --font-serif: 'Cinzel', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        header.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 92px;
+            padding: 12px 3.2%;
+            background-color: var(--light-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #d3d8d5;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--navy-blue);
+        }
+
+        .logo-container img {
+            width: 225px;
+            max-width: 100%;
+            height: 64px;
+            object-fit: contain;
+            object-position: left center;
+            margin-right: 0;
+        }
+
+        .logo-text h1 {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            font-size: 0.7rem;
+            color: var(--text-gray);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--navy-blue);
+        }
+
+        section {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 62px 42px;
+        }
+
+        .section-navy {
+            background-color: var(--navy-blue);
+            color: var(--white);
+        }
+
+        .contact-hero {
+            text-align: left;
+        }
+
+        .contact-hero .subtitle {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .direct-channels {
+            background: var(--white);
+            border-top: 32px solid var(--light-bg);
+            border-bottom: 20px solid var(--light-bg);
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            align-items: start;
+            gap: 30px;
+            padding: 60px 42px;
+        }
+
+        .direct-channels a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .direct-channels .title-serif {
+            font-size: 2rem;
+        }
+
+        .title-serif {
+            font-family: var(--font-serif);
+            font-size: clamp(2.4rem, 4.1vw, 3.45rem);
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            margin-bottom: 38px;
+            max-width: 720px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--white);
+            color: var(--navy-blue);
+            padding: 15px 28px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #e0e0e0;
+        }
+
+        img.full-width {
+            width: calc(100% + 84px);
+            height: 390px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            margin: 48px -42px -62px;
+        }
+
+        footer {
+            background-color: var(--navy-blue);
+            color: var(--white);
+            padding: 26px 3.2%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 900px) {
+            header.navbar {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+            nav {
+                width: 100%;
+                overflow-x: auto;
+            }
+            nav ul {
+                display: flex;
+                gap: 14px;
+                width: max-content;
+            }
+            nav a {
+                font-size: 0.68rem;
+            }
+            .logo-container img {
+                width: 205px;
+                height: 58px !important;
+            }
+            section {
+                padding: 42px 24px;
+            }
+            .title-serif {
+                font-size: 2.2rem;
+            }
+            img.full-width {
+                height: 260px;
+                width: calc(100% + 48px);
+                margin: 36px -24px -42px;
+            }
+            section[style*="justify-content"] {
+                display: grid !important;
+                grid-template-columns: 1fr;
+                gap: 24px !important;
+                padding: 42px 24px !important;
+            }
+            .direct-channels {
+                grid-template-columns: 1fr;
+                padding: 42px 24px;
+            }
+            footer {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+
+        @media (min-width: 901px) and (max-width: 1100px) {
+            nav ul {
+                gap: 12px;
+            }
+            nav a {
+                font-size: 0.72rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <a href="inicio.html" class="logo-container">
+            <img src="REAL PNG.png" alt="Logo DIANCO">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="construccion.html">Construcción y Diseño</a></li>
+                <li><a href="consultoria.html">Consultoría</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PANTALLA 4: CONTACTO -->
+    <section class="section-navy contact-hero">
+        <!-- CAMBIAR TEXTO: cambia el número, el título y el párrafo de este bloque. -->
+        <p style="font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 10px;">03 / CONTACTO</p>
+        <h2 class="title-serif">
+            ASEGUREMOS EL RUMBO DE TU<br>
+            PROYECTO DESDE EL PRIMER DÍA
+        </h2>
+        <p class="subtitle" style="color: #ccc;">Escríbenos con una idea inicial, una consulta técnica o un proyecto en ejecución.<br>Nuestro primer paso es diagnosticar exactamente qué necesitas resolver.</p>
+        
+        <!-- CAMBIAR CORREO: cambia la dirección después de mailto: para tu correo real. -->
+        <a href="mailto:dianco.oficial@gmail.com?subject=Consulta Técnica - DIANCO" class="btn">ESCRIBIR AHORA ↗</a>
+        <!-- CAMBIAR IMAGEN: cambia la URL dentro de src="..." por otra imagen de contacto. -->
+        <img src="imagen-11.jpg" alt="Imagen de contacto DIANCO" class="full-width" style="object-position: center 80%;">
+    </section>
+
+    <section class="direct-channels">
+        <!-- CAMBIAR TEXTO: edita el titulo y la informacion de cada canal en los bloques siguientes. -->
+        <h2 class="title-serif" style="color: var(--navy-blue); font-size: 2rem;">CANALES DIRECTOS</h2>
+        <div>
+            <p style="font-weight: 600;">01 / UBICACIÓN Y COBERTURA</p>
+            <p style="color: var(--text-gray);">Lima, Perú — Atención a proyectos a nivel nacional</p>
+        </div>
+        <div>
+            <p style="font-weight: 600;">02 / REDES Y CONTACTO</p>
+            <p style="color: var(--text-gray);">Escríbenos a <a href="mailto:dianco.oficial@gmail.com">dianco.oficial@gmail.com</a> para atención inmediata.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>DIANCO S.A.C. — CONSTRUCTORA & CONSULTORA</div>
+        <div>LIMA, PERÚ</div>
+    </footer>
+
+    <script>
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+        window.addEventListener("pageshow", function () {
+            document.documentElement.style.scrollBehavior = "auto";
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
